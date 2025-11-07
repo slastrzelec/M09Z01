@@ -6,6 +6,12 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import matplotlib.pyplot as plt
 import os
 
+# Ustaw host i port zgodnie z wymaganiami DigitalOcean
+port = int(os.environ.get("PORT", 8501))  # domyślnie 8501 lokalnie
+st.set_page_config(page_title="Predykcja czasu półmaratonu", page_icon="🏃", layout="wide")
+
+
+
 # Konfiguracja strony
 st.set_page_config(
     page_title="Predykcja czasu półmaratonu",
